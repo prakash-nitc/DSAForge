@@ -12,16 +12,43 @@ title: Hash Maps & Frequency
 
 ```java
 // fixed lowercase alphabet: fastest, O(1) space
-int[] cnt = new int[26];
-for (char ch : s.toCharArray()) cnt[ch - 'a']++;
+int[] freq = new int[26];
+
+for(int i = 0; i < s.length(); i++)
+{
+    char ch = s.charAt(i);
+    freq[ch - 'a']++;
+}
 
 // general keys
-Map<Character,Integer> m = new HashMap<>();
-for (char ch : s.toCharArray()) m.merge(ch, 1, Integer::sum);
+HashMap<Character, Integer> map = new HashMap<>();
+
+for(int i = 0; i < s.length(); i++)
+{
+    char ch = s.charAt(i);
+    map.put(ch, map.getOrDefault(ch, 0) + 1);
+}
+// Iterate through HashMap
+for(Map.Entry<Character, Integer> entry : map.entrySet())
+{
+    char ch = entry.getKey();
+    int freq = entry.getValue();
+}
 
 // grouping
-Map<String,List<String>> g = new HashMap<>();
-g.computeIfAbsent(key, x -> new ArrayList<>()).add(word);
+HashMap<String, ArrayList<String>> map = new HashMap<>();
+
+for(int i = 0; i < words.length; i++)
+{
+    String key = getKey(words[i]);
+
+    if(!map.containsKey(key))
+    {
+        map.put(key, new ArrayList<>());
+    }
+
+    map.get(key).add(words[i]);
+}
 ```
 
 ## Template 9B — Complement lookup (Two Sum shape)
