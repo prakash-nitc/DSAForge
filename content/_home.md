@@ -13,7 +13,7 @@ Read [Part 0](Part 0). Run one card. Report the number.
 | Doing your normal daily prep | Permanent standing routine, non-negotiable. | [The 25-Minute Daily Loop](§7.7) |
 | Repairing a pattern that has decayed | One 90-minute session restores 6–20 problems. | [Pick the card](Part II) [The repair session](§5) |
 | Building a topic from zero | Graphs, DP, Tries: templates first, then problems, 4–6 days each. | [Topic Builds](Part III) |
-| Blanking on Java syntax under pressure | Collections, idioms, traps, complexity. | [Idiom sheet](§19) [The eighteen traps](§20) |
+| Blanking on Java syntax under pressure | Signatures, conversions, every structure's operations. | [Syntax basics](§23) [Idiom sheet](§19) [The eighteen traps](§20) |
 | The night before an interview | Checklist, then the complete template library. | [The night before](Appendix J) [All templates](Appendix A) |
 
 ## Pattern board
