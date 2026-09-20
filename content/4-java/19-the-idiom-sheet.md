@@ -55,6 +55,32 @@ new StringBuilder(s).reverse().toString();
 sb.append(x); sb.setCharAt(i, ch); sb.deleteCharAt(sb.length()-1);
 s.split("/");   s.substring(i, j);   s.indexOf(t);
 String.join(",", list);
+
+There are four primary methods to convert a char to an int in Java, depending on whether you need the ASCII/Unicode value or the numeric digit value. 
+
+1. Implicit Type Casting (ASCII Value)
+Assigning a char directly to an int variable retrieves its ASCII or Unicode code point.
+
+char ch = 'A';
+int asciiValue = ch; // Result: 65
+
+2. Character.getNumericValue() (Digit Value)
+This method extracts the numeric value of a character, useful for digits and other numeric Unicode characters.
+
+char ch = '7';
+int num = Character.getNumericValue(ch); // Result: 7
+
+3. Subtraction with '0' (Digit Value)
+Subtracting the character '0' from a numeric character converts it to its integer equivalent. This is a common optimization for parsing digits.
+
+char ch = '9';
+int num = ch - '0'; // Result: 9
+
+4. String Conversion with parseInt()
+Convert the character to a String first, then parse it as an integer. This is useful when handling characters from strings.
+
+char ch = '5';
+int num = Integer.parseInt(String.valueOf(ch)); // Result: 5
 ```
 
 ### Deques, heaps, and grids
